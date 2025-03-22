@@ -31,16 +31,18 @@ function App() {
   )
 
   return (
+
     <div className="app">
-      <h1>Password Manager</h1>
-      <div></div>
-      <div className="input-container">
+      <img src = "https://assets.ccbp.in/frontend/react-js/password-manager-logo-img.png" width= "200px" alt="app logo" />
+
+        <div className="input-container">
         <form onSubmit={handleSubmit}>
           <input
             type="text"
             placeholder="Enter Website"
             value={website}
             onChange={(e) => setWebsite(e.target.value)}
+           
           />
           <input
             type="text"
@@ -56,11 +58,13 @@ function App() {
           />
           <button type="submit">Add</button>
         </form>
+        <br></br>
         <div>
-          <img className='img1' src='https://media.istockphoto.com/id/1490661442/vector/create-new-password-abstract-concept-vector-illustration.jpg?s=612x612&w=0&k=20&c=SUj3stazjz7NI6lX5B7qaoZl6p-z2ynX7RSPwMrBG-U=' alt="app logo" />
+          <img className='img1' width= "350px" src='https://media.istockphoto.com/id/1490661442/vector/create-new-password-abstract-concept-vector-illustration.jpg?s=612x612&w=0&k=20&c=SUj3stazjz7NI6lX5B7qaoZl6p-z2ynX7RSPwMrBG-U=' alt="app logo" />
         </div>
       </div>
       {/* https://assets.ccbp.in/frontend/react-js/password-manager-logo-img.png */}
+
       <div className="search-container">
         <input
         
