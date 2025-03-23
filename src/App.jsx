@@ -33,47 +33,53 @@ function App() {
   return (
 
     <div className="app">
-      <img src = "https://assets.ccbp.in/frontend/react-js/password-manager-logo-img.png" width= "200px" alt="app logo" />
 
-        <div className="input-container">
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder="Enter Website"
-            value={website}
-            onChange={(e) => setWebsite(e.target.value)}
-           
-          />
-          <input
-            type="text"
-            placeholder="Enter Username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-          <input
-            type="password"
-            placeholder="Enter Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <button type="submit">Add</button>
-        </form>
-        <br></br>
+      <img src = "https://assets.ccbp.in/frontend/react-js/password-manager-logo-img.png" width= "150px" className='mb-3' alt="App Logo"/>
+
+      <div className="input-container">
+        <div className='login-cont'>
+          <form onSubmit={handleSubmit}>
+            <h5 className='text-white'>Add New Password</h5>
+            <input
+              type="text"
+              placeholder="Enter Website"
+              value={website}
+              onChange={(e) => setWebsite(e.target.value)}
+            
+            />
+            <input
+              type="text"
+              placeholder="Enter Username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
+            <input
+              type="password"
+              placeholder="Enter Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <button type="submit">Add</button>
+          </form>
+        </div>
         <div>
-          <img className='img1' width= "350px" src='https://media.istockphoto.com/id/1490661442/vector/create-new-password-abstract-concept-vector-illustration.jpg?s=612x612&w=0&k=20&c=SUj3stazjz7NI6lX5B7qaoZl6p-z2ynX7RSPwMrBG-U=' alt="app logo" />
+          <img className='img1' src='https://media.istockphoto.com/id/1490661442/vector/create-new-password-abstract-concept-vector-illustration.jpg?s=612x612&w=0&k=20&c=SUj3stazjz7NI6lX5B7qaoZl6p-z2ynX7RSPwMrBG-U=' alt="app logo" />
         </div>
       </div>
-      {/* https://assets.ccbp.in/frontend/react-js/password-manager-logo-img.png */}
+      <div className='d-flex justify-content-between'>
 
-      <div className="search-container">
-        <input
-        
-          type="text"
-          placeholder="Search Passwords"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
+        <h5>Your Password</h5>
+        <div className="search-container">
+          <input
+          
+            type="text"
+            placeholder="Search Passwords"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
 
-        />
+          />
+        </div>
+
       </div>
 
       <div className="toggle-container">
@@ -83,7 +89,7 @@ function App() {
           checked={showPasswords}
           onChange={() => setShowPasswords(!showPasswords)}
         />
-        
+
         <label htmlFor="showPasswords">Show Passwords</label>
       </div>
 
